@@ -1,0 +1,43 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.trading-card{
+    border: black 1px solid;
+    width: 400px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: #00FA9A; */
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.trading-card header{
+    background-color: #ffb7c5;
+    margin-bottom: 5%;
+    border: solid black 1px;
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.trading-card footer{
+    margin-top: 5%;
+    padding: 2.5%;
+    background-color: #ffb7c5;
+    flex-grow: 1;
+    border: solid black 1px;
+}
+
+.trading-card img{
+    max-height: 60%;
+    background-color: gray;
+    border: solid black 1px;
+}
+
+.trading-card p {
+    text-align: center;
+    margin: 0;
+}
