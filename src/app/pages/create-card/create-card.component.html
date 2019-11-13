@@ -1,23 +1,21 @@
 <div class="container">
     <div class="trading-card">
-        <header>
-            <p>Mulan</p>
+        <header [style.background-color]="characterColour">
+            <p [innerHTML]="characterName"></p>
         </header>
-        <img src="https://exploringyourmind.com/wp-content/uploads/2018/04/mulan1-600x450.jpg">
-        <footer>
-            <p>Mulan is a loving girl who is always brave and bold.
-                When her country needs it most, she disguises herself as a man and goes off to fight.
-                She uses courage and determination to win the day.</p>
+        <img [src]="characterImageSrc">
+        <footer [style.background-color]="characterColour">
+            <p [innerHTML]="characterDescription"></p>
         </footer>
     </div>
     <div class="form">
         <label>Character Name</label><br>
-        <input><br>
+        <input [(ngModel)]="characterName"><br>
         <label>Description</label><br>
-        <input><br>
+        <textarea [(ngModel)]="characterDescription"></textarea><br>
         <label>Image</label><br>
-        <input type="file"><br>
+        <input type="file" id="fileUpload"><br>
         <label>Primary Colour</label><br>
-        <input type="color"><br>
+        <input type="color" [(ngModel)]="characterColour"><br>
     </div>
 </div>
