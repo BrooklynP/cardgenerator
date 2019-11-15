@@ -1,27 +1,12 @@
-# CardGenerator
+# Card Generator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+![](https://media.giphy.com/media/Lk4ESQ9fL1vy/giphy.gif)
 
-## Development server
+This is a trading card maker app i've made so that I can easily generate a large amount of disney cards to print off for my trip to disney world in 2020. Then I can get the cards signed and make a scrapbook!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project has been good practice for angular binding and form use. Angular binding is important to get my head around as using direct DOM manipulation with angular projects is bad practice.
 
-## Code scaffolding
+## Built With
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![](https://angular.io/assets/images/favicons/favicon-96x96.png)
+* [Angular](https://angular.io/) - The web framework used 
