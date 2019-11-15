@@ -1,22 +1,25 @@
 <div class="container">
     <div class="trading-card">
         <header [style.background-color]="characterColour">
-            <p [innerHTML]="characterName"></p>
+            <p [innerHTML]="selectedCard.characterName"></p>
         </header>
-        <img [src]="characterImageSrc">
-        <footer [style.background-color]="characterColour">
-            <p [innerHTML]="characterDescription"></p>
+        <img [src]="selectedCard.characterImgPath">
+        <footer [style.background-color]="selectedCard.characterColourHex">
+            <p [innerHTML]="selectedCard.characterDesc"></p>
         </footer>
     </div>
     <div class="form">
+        <select id="cardSelect" [(ngModel)]="selectedCardIndex">
+            <option *ngFor="let card of cardsService.cards; let i = index" [value]="i">{{card.characterName}}</option>
+        </select><br>
         <label>Character Name</label><br>
-        <input [(ngModel)]="characterName"><br>
+        <input [(ngModel)]="selectedCard.characterName"><br>
         <label>Description</label><br>
-        <textarea [(ngModel)]="characterDescription"></textarea><br>
+        <textarea [(ngModel)]="selectedCard.characterDesc"></textarea><br>
         <label>Image</label><br>
         <input type="file" id="fileUpload"><br>
         <label>Primary Colour</label><br>
-        <input type="color" [(ngModel)]="characterColour"><br>
+        <input type="color" [(ngModel)]="selectedCard.characterColourHex"><br>
         <br>
         <button (click)="addCardToCollection()">Add Card To Collection</button>
     </div>

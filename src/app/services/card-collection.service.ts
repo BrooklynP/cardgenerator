@@ -6,16 +6,17 @@ import { Card } from 'src/app/models/card';
 })
 export class CardCollectionService {
 
-  public static cards: Array<Card> = [];
+  public cards: Array<Card> = [];
 
   constructor() { }
 
   public addCard(card: Card) {
-    CardCollectionService.cards.push(card);
+    this.cards.push(card);
+
   }
 
   public removeCard(index: number) {
-    CardCollectionService.cards.splice(index, 1);
+    this.cards.splice(index, 1);
   }
 
 }
