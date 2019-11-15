@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { element } from 'protractor';
+import { CardCollectionService } from 'src/app/services/card-collection.service';
 
 @Component({
   selector: 'app-create-card',
@@ -14,7 +14,7 @@ export class CreateCardComponent implements OnInit {
   public characterImageSrc = 'https://exploringyourmind.com/wp-content/uploads/2018/04/mulan1-600x450.jpg';
   public characterColour = '#ffb7c5';
 
-  constructor() {
+  constructor(public cardsService: CardCollectionService) {
 
   }
 
@@ -25,5 +25,16 @@ export class CreateCardComponent implements OnInit {
         img.src = URL.createObjectURL(this.files[0]); // set src to blob url
       }
     });
+  }
+
+  addCardToCollection() {
+    this.cardsService.addCard({
+        characterName: this.characterName,
+        characterDesc: this.characterDescription,
+        characterImgPath: this.characterImageSrc,
+        characterColourHex: this.characterColour
+    });
+
+    console.log(CardCollectionService.cards);
   }
 }
